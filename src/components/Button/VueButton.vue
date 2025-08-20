@@ -1,33 +1,27 @@
 <template>
-  <button class="vue-border-button" :class="`vue-border-button-${buttonColor}`">
+  <button class="vue-button" :class="`vue-button-${props.color}`">
     <slot />
   </button>
 </template>
 <script lang="ts" setup>
-import { defineProps, computed, withDefaults } from "vue";
+import { defineProps } from "vue";
 import ButtonColors from "./ButtonColors";
 
 interface Props {
-  color?: ButtonColors;
+  color: ButtonColors | string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  color: ButtonColors.WHITE, // Default value for optional 'count' prop
-});
-
-const buttonColor = computed((): ButtonColors => {
-  return props.color;
-});
+const props = defineProps<Props>();
 </script>
 <style lang="scss">
 @import "../../assets/scss/color.scss";
-
-.vue-border-button {
-  padding: 10px 20px;
+.vue-button {
+  padding: 15px 25px;
   border-radius: 27px;
   transition: all 0.4s ease;
   font-weight: 600;
   cursor: pointer;
+  border: none;
   &:active {
     scale: 1.05;
     transition: all 0.4s ease;
@@ -35,12 +29,10 @@ const buttonColor = computed((): ButtonColors => {
   &-red {
     background-color: $red;
     color: $white;
-    border: 3px solid $white;
   }
   &-white {
     background-color: $white;
     color: $red;
-    border: 3px solid $red;
   }
 }
 </style>
