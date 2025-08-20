@@ -16,10 +16,12 @@
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "noUnusedParameters": true,    
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+     "erasableSyntaxOnly": false,
+    "isolatedModules": false,     
+    "preserveConstEnums": true 
   },
   "include": ["vite.config.ts"]
 }

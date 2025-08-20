@@ -1,14 +1,15 @@
 <template>
-  <div class="vue-menu-link">
+  <div class="vue-phone-link">
     <slot />
   </div>
 </template>
 <script lang="ts" setup></script>
 <style lang="scss">
 @import "../../assets/scss/color.scss";
-.vue-menu-link {
+.vue-phone-link {
   padding: 10px 20px;
-  background-color: $white;
+  background-color: $red;
+  color: white;
   border-radius: 27px;
 }
 </style>
