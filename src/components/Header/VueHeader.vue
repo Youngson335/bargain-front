@@ -1,7 +1,7 @@
 <template>
   <header class="vue-header container">
     <vue-menu class="vue-header__menu" />
-    <vue-content-header />
+    <vue-content-header class="vue-header__content" />
   </header>
 </template>
 <script lang="ts" setup>
@@ -12,6 +12,9 @@ import VueContentHeader from "./VueContentHeader.vue";
 .vue-header {
   &__menu {
     margin: 10px 0px;
+  }
+  &__content {
+    margin-bottom: 50px;
   }
 }
 </style>
