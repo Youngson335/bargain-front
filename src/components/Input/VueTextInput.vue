@@ -30,7 +30,11 @@ input {
   padding: 15px 20px;
   width: 100%;
   border-radius: 50px;
+  &::placeholder {
+    font-weight: 500;
+  }
 }
+
 .vue-text-input {
   width: 100%;
 }
