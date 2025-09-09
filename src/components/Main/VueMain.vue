@@ -12,6 +12,7 @@ import VueQuestionMain from "./VueQuestionMain.vue";
 </script>
 <style lang="scss">
 .vue-main {
+  margin-bottom: 20px;
   &-block {
     margin-bottom: 20px;
   }
